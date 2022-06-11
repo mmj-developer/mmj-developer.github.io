@@ -6,18 +6,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="제 블로그에요..">
-    <title>Archives: 2022 - 제 블로그에요..</title>
+    <title>파이썬(Python) - 자료형 - 제 블로그에요..</title>
     <meta name="author" content="developer-mmj">
     
     
     
-    <script type="application/ld+json">{}</script>
-    <meta property="og:type" content="blog">
-<meta property="og:title" content="제 블로그에요..">
-<meta property="og:url" content="https://mmj-developer.github.io/archives/2022/index.html">
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"developer-mmj","sameAs":[],"image":"image.jpg"},"articleBody":"파이썬은 자바나 C처럼 변수의 자료형을 선언해주지 않아도 된다는 편리함을 가졌다.변수를 선언하고 값을 넣어주면 파이썬 내부에서 자동으로 변수 타입을 지정하고 값을 저장하게 된다.참고로 해당하는 값의 자료형은  type()함수를 통해 확인할 수 있다.\n숫자형12345678# 정수형&gt;&gt;&gt; a = 120# 실수형&gt;&gt;&gt; b = 25.37# 8진수&gt;&gt;&gt; c = 0o177# 16진수&gt;&gt;&gt; d = 0xABC\n\n문자열 자료형12345678910&gt;&gt;&gt; strA = &#x27;Python&#x27;&gt;&gt;&gt; strB = &quot;Python&quot;&gt;&gt;&gt; strC = &#x27;&#x27;&#x27;python1python2python3&#x27;&#x27;&#x27;&gt;&gt;&gt; strD = &quot;&quot;&quot;python1python2python3&quot;&quot;&quot;\n문자열 인덱스, 슬라이싱변수안에서 해당하는 값이 어느 위치에 있는지 찾을 때에는 index(), find()해당하는 변수의 글자를 추출할 때는 변수[:]를 사용하면 된다.\n1234567&gt;&gt;&gt; a = &quot;nice to meet you&quot;&gt;&gt;&gt; print(a.index(&quot;i&quot;))1&gt;&gt;&gt; print(a[0:4])nice&gt;&gt;&gt; print(a[:])         # 시작위치 종료 위치를 비우게 되면 시작지점은 0 끝지점은 -1이다.nice to meet you\n\n리스트파이썬의 리스트는 요소가 추가될 수 있으며 요소가 문자와 숫자가 함께 포함될 수 있다. \n1234567&gt;&gt;&gt; a = [1, 2, 3]&gt;&gt;&gt; b = [&#x27;A&#x27;, &#x27;B&#x27;, &#x27;C&#x27;]&gt;&gt;&gt; c = [1, 2, &#x27;A&#x27;, &#x27;B&#x27;]&gt;&gt;&gt; d = [1, 2, [&#x27;A&#x27;, &#x27;B&#x27;], [&#x27;C&#x27;, &#x27;D&#x27;]]&gt;&gt;&gt; e = list(&quot;ABCDE&quot;)       # 문자를 한글자씩 list로 선언하는 것도 가능하다.&gt;&gt;&gt; print(e)[&#x27;A&#x27;, &#x27;B&#x27;, &#x27;C&#x27;, &#x27;D&#x27;, &#x27;E&#x27;]\n리스트 인덱싱, 슬라이싱리스트 역시 문자열처럼 인덱싱과 슬라이싱이 가능하다.\n123456789&gt;&gt;&gt; a = [1, 2, 3, 4, 5]&gt;&gt;&gt; print(a[0])     # 리스트 a의 첫번째 요소값 출력1&gt;&gt;&gt; print(a[-1])    # 리스트 a의 마지막 요소값 출력5&gt;&gt;&gt; print(a[::2])   # 리스트를 처음부터 끝까지 요소를 하나씩 띄워서 출력[1, 3, 5]&gt;&gt;&gt; print(len(a))   # 리스트의 길이 구하는 함수5\n\n리스트 연산파이썬의 리스트는 연산이 가능하여 + 기호를 통해 연결할 수 있고 * 기호를 통해 반복할 수 있다.\n1234567&gt;&gt;&gt; a = [1, 2, 3]&gt;&gt;&gt; b = [4, 5, 6]&gt;&gt;&gt; a + b[1, 2, 3, 4, 5, 6]&gt;&gt;&gt; a = [1, 2, 3]&gt;&gt;&gt; a * 3[1, 2, 3, 1, 2, 3, 1, 2, 3]\n\n리스트 요소 추가&#x2F;수정&#x2F;삭제123456789101112131415161718&gt;&gt;&gt; a = [1, 2, 3, 4, 5]# 리스트의 요소 수장&gt;&gt;&gt; a[0] = 2&gt;&gt;&gt; a[1] = 1&gt;&gt;&gt; print(a)[2, 1, 3, 4, 5]# 리스트의 요소 삭제&gt;&gt;&gt; del a[-1]&gt;&gt;&gt; del a[0:1]&gt;&gt;&gt; print(a)[1, 3, 4]# 리스트 추가/삽입&gt;&gt;&gt; a.append(5)&gt;&gt;&gt; print(a)[1, 3, 4, 5]&gt;&gt;&gt; a.insert(0, 6)  #0의 위치에 값 6 삽입&gt;&gt;&gt; print(a)[6, 1, 3, 4, 5]\n\n리스트 관련 함수12345678910&gt;&gt;&gt; a = [1, 2, 5, 4, 3]# 리스트 정렬&gt;&gt;&gt; a.sort()&gt;&gt;&gt; print(a)[1, 2, 3, 4, 5]# 리스트 뒤집기&gt;&gt;&gt; a.reverse()&gt;&gt;&gt; print(a)[5, 4, 3, 2, 1]","dateCreated":"2022-06-04T18:04:48+09:00","dateModified":"2022-06-04T20:29:23+09:00","datePublished":"2022-06-04T18:04:48+09:00","description":"","headline":"파이썬(Python) - 자료형","image":[],"mainEntityOfPage":{"@type":"WebPage","@id":"https://mmj-developer.github.io/2022/06/04/post-name/"},"publisher":{"@type":"Organization","name":"developer-mmj","sameAs":[],"image":"image.jpg","logo":{"@type":"ImageObject","url":"image.jpg"}},"url":"https://mmj-developer.github.io/2022/06/04/post-name/","keywords":"python, 파이썬, 개발, programming"}</script>
+    <meta name="description" content="파이썬은 자바나 C처럼 변수의 자료형을 선언해주지 않아도 된다는 편리함을 가졌다.변수를 선언하고 값을 넣어주면 파이썬 내부에서 자동으로 변수 타입을 지정하고 값을 저장하게 된다.참고로 해당하는 값의 자료형은  type()함수를 통해 확인할 수 있다. 숫자형12345678# 정수형&gt;&gt;&gt; a &#x3D; 120# 실수형&gt;&gt;&gt; b &#x3D; 25">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="파이썬(Python) - 자료형">
+<meta property="og:url" content="https://mmj-developer.github.io/2022/06/04/post-name/index.html">
 <meta property="og:site_name" content="제 블로그에요..">
+<meta property="og:description" content="파이썬은 자바나 C처럼 변수의 자료형을 선언해주지 않아도 된다는 편리함을 가졌다.변수를 선언하고 값을 넣어주면 파이썬 내부에서 자동으로 변수 타입을 지정하고 값을 저장하게 된다.참고로 해당하는 값의 자료형은  type()함수를 통해 확인할 수 있다. 숫자형12345678# 정수형&gt;&gt;&gt; a &#x3D; 120# 실수형&gt;&gt;&gt; b &#x3D; 25">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-06-04T09:04:48.074Z">
+<meta property="article:modified_time" content="2022-06-04T11:29:23.441Z">
 <meta property="article:author" content="developer-mmj">
+<meta property="article:tag" content="python">
+<meta property="article:tag" content="파이썬">
+<meta property="article:tag" content="개발">
+<meta property="article:tag" content="programming">
 <meta name="twitter:card" content="summary">
     
     
@@ -48,6 +56,8 @@
     
 
     
+        
+    
 </head>
 
     <body>
@@ -61,7 +71,7 @@
         
     
 
-<header id="header" data-behavior="1">
+<header id="header" data-behavior="4">
     <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
     <div class="header-title">
         <a
@@ -94,7 +104,7 @@
         
     
 
-<nav id="sidebar" data-behavior="1">
+<nav id="sidebar" data-behavior="4">
     <div class="sidebar-container">
         
             <div class="sidebar-profile">
@@ -194,30 +204,22 @@
 </nav>
 
             
-            <div id="main" data-behavior="1"
+            <div id="main" data-behavior="4"
                  class="
                         hasCoverMetaIn
                         ">
                 
-    <section class="postShorten-group main-content-wrap">
+<article class="post">
     
     
-    <article class="postShorten postShorten--thumbnailimg-bottom">
-        <div class="postShorten-wrap">
-            
-            <div class="postShorten-header">
-                <h1 class="postShorten-title">
-                    
-                        <a
-                            class="link-unstyled"
-                            href="/2022/06/04/post-name/"
-                            aria-label=": 파이썬(Python) - 자료형"
-                        >
-                            파이썬(Python) - 자료형
-                        </a>
-                    
-                </h1>
-                <div class="postShorten-meta">
+        <div class="post-header main-content-wrap text-left">
+    
+        <h1 class="post-title">
+            파이썬(Python) - 자료형
+        </h1>
+    
+    
+        <div class="post-meta">
     <time datetime="2022-06-04T18:04:48+09:00">
 	
 		    Jun 04, 2022
@@ -232,10 +234,13 @@
     
 </div>
 
-            </div>
-            
-                <div class="postShorten-content">
-                    <p>파이썬은 자바나 C처럼 변수의 자료형을 선언해주지 않아도 된다는 편리함을 가졌다.<br>변수를 선언하고 값을 넣어주면 파이썬 내부에서 자동으로 변수 타입을 지정하고 값을 저장하게 된다.<br>참고로 해당하는 값의 자료형은  <code>type()</code>함수를 통해 확인할 수 있다.</p>
+    
+</div>
+
+    
+    <div class="post-content markdown">
+        <div class="main-content-wrap">
+            <p>파이썬은 자바나 C처럼 변수의 자료형을 선언해주지 않아도 된다는 편리함을 가졌다.<br>변수를 선언하고 값을 넣어주면 파이썬 내부에서 자동으로 변수 타입을 지정하고 값을 저장하게 된다.<br>참고로 해당하는 값의 자료형은  <code>type()</code>함수를 통해 확인할 수 있다.</p>
 <h2 id="숫자형"><a href="#숫자형" class="headerlink" title="숫자형"></a>숫자형</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 정수형</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a = <span class="number">120</span></span><br><span class="line"><span class="comment"># 실수형</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>b = <span class="number">25.37</span></span><br><span class="line"><span class="comment"># 8진수</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>c = <span class="number">0o177</span></span><br><span class="line"><span class="comment"># 16진수</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>d = <span class="number">0xABC</span></span><br></pre></td></tr></table></figure>
 
 <h2 id="문자열-자료형"><a href="#문자열-자료형" class="headerlink" title="문자열 자료형"></a>문자열 자료형</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>strA = <span class="string">&#x27;Python&#x27;</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>strB = <span class="string">&quot;Python&quot;</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>strC = <span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">python1</span></span><br><span class="line"><span class="string">python2</span></span><br><span class="line"><span class="string">python3&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>strD = <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">python1</span></span><br><span class="line"><span class="string">python2</span></span><br><span class="line"><span class="string">python3&quot;&quot;&quot;</span></span><br></pre></td></tr></table></figure>
@@ -253,101 +258,121 @@
 <h3 id="리스트-요소-추가-x2F-수정-x2F-삭제"><a href="#리스트-요소-추가-x2F-수정-x2F-삭제" class="headerlink" title="리스트 요소 추가&#x2F;수정&#x2F;삭제"></a>리스트 요소 추가&#x2F;수정&#x2F;삭제</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>a = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]</span><br><span class="line"><span class="comment"># 리스트의 요소 수장</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a[<span class="number">0</span>] = <span class="number">2</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a[<span class="number">1</span>] = <span class="number">1</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">print</span>(a)</span><br><span class="line">[<span class="number">2</span>, <span class="number">1</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]</span><br><span class="line"><span class="comment"># 리스트의 요소 삭제</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">del</span> a[-<span class="number">1</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">del</span> a[<span class="number">0</span>:<span class="number">1</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">print</span>(a)</span><br><span class="line">[<span class="number">1</span>, <span class="number">3</span>, <span class="number">4</span>]</span><br><span class="line"><span class="comment"># 리스트 추가/삽입</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a.append(<span class="number">5</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">print</span>(a)</span><br><span class="line">[<span class="number">1</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a.insert(<span class="number">0</span>, <span class="number">6</span>)  <span class="comment">#0의 위치에 값 6 삽입</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">print</span>(a)</span><br><span class="line">[<span class="number">6</span>, <span class="number">1</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]</span><br></pre></td></tr></table></figure>
 
 <h3 id="리스트-관련-함수"><a href="#리스트-관련-함수" class="headerlink" title="리스트 관련 함수"></a>리스트 관련 함수</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>a = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">5</span>, <span class="number">4</span>, <span class="number">3</span>]</span><br><span class="line"><span class="comment"># 리스트 정렬</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a.sort()</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">print</span>(a)</span><br><span class="line">[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]</span><br><span class="line"><span class="comment"># 리스트 뒤집기</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a.reverse()</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">print</span>(a)</span><br><span class="line">[<span class="number">5</span>, <span class="number">4</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">1</span>]</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-                    
-                        
-
-
-                    
-                    
-                        <p>
-                            <a
-                                href="/2022/06/04/post-name/#post-footer"
-                                class="postShorten-excerpt_link link"
-                                aria-label=""
-                            >
-                                Comment and share
-                            </a>
-                        </p>
-                    
-                </div>
             
+
+
         </div>
+    </div>
+    <div id="post-footer" class="post-footer main-content-wrap">
         
-    </article>
-    
-    
-    <article class="postShorten postShorten--thumbnailimg-bottom">
-        <div class="postShorten-wrap">
-            
-            <div class="postShorten-header">
-                <h1 class="postShorten-title">
-                    
-                        <a
-                            class="link-unstyled"
-                            href="/2022/05/15/hello-world/"
-                            aria-label=": git 블로그 시작하기"
-                        >
-                            git 블로그 시작하기
-                        </a>
-                    
-                </h1>
-                <div class="postShorten-meta">
-    <time datetime="2022-05-15T21:08:12+09:00">
-	
-		    May 15, 2022
-    	
-    </time>
-    
-</div>
+            <div class="post-footer-tags">
+                <span class="text-color-light text-small">TAGGED IN</span><br/>
+                
+    <a class="tag tag--primary tag--small t-none-link" href="/tags/programming/" rel="tag">programming</a> <a class="tag tag--primary tag--small t-none-link" href="/tags/python/" rel="tag">python</a> <a class="tag tag--primary tag--small t-none-link" href="/tags/%EA%B0%9C%EB%B0%9C/" rel="tag">개발</a> <a class="tag tag--primary tag--small t-none-link" href="/tags/%ED%8C%8C%EC%9D%B4%EC%8D%AC/" rel="tag">파이썬</a>
 
             </div>
-            
-                <div class="postShorten-content">
-                    <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">f</span></span>() &#123;</span><br><span class="line">    int i = 10;</span><br><span class="line">    <span class="keyword">if</span>(i%2==1) &#123;</span><br><span class="line">        alert(<span class="string">&quot;홀수&quot;</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        alert(<span class="string">&quot;짝수0&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-                    
+        
+        
+            <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a
+                        class="post-action-btn btn btn--disabled"
+                        aria-hidden="true"
+                    >
                         
-
-
+                        <i class="fa fa-angle-left" aria-hidden="true"></i>
+                        <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
+                    </a>
+            </li>
+            <li class="post-action">
+                
                     
+                <a
+                    class="post-action-btn btn btn--default tooltip--top"
+                    href="/2022/05/15/hello-world/"
+                    data-tooltip="git 블로그 시작하기"
+                    aria-label="NEXT: git 블로그 시작하기"
+                >
                     
-                        <p>
-                            <a
-                                href="/2022/05/15/hello-world/#post-footer"
-                                class="postShorten-excerpt_link link"
-                                aria-label=""
-                            >
-                                Comment and share
-                            </a>
-                        </p>
-                    
-                </div>
+                        <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a
+                class="post-action-btn btn btn--default btn-open-shareoptions"
+                href="#btn-open-shareoptions"
+                aria-label="Share this post"
+            >
+                <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </a>
+        </li>
+        
             
-        </div>
+            
+            <li class="post-action hide-xs">
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://mmj-developer.github.io/2022/06/04/post-name/"
+                    title="Share on Facebook"
+                    aria-label="Share on Facebook"
+                >
+                    <i class="fab fa-facebook" aria-hidden="true"></i>
+                </a>
+            </li>
         
-    </article>
-    
-    <div class="pagination-bar">
-    <ul class="pagination">
+            
+            
+            <li class="post-action hide-xs">
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://twitter.com/intent/tweet?text=https://mmj-developer.github.io/2022/06/04/post-name/"
+                    title="Share on Twitter"
+                    aria-label="Share on Twitter"
+                >
+                    <i class="fab fa-twitter" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://plus.google.com/share?url=https://mmj-developer.github.io/2022/06/04/post-name/"
+                    title="Share on Google+"
+                    aria-label="Share on Google+"
+                >
+                    <i class="fab fa-google-plus" aria-hidden="true"></i>
+                </a>
+            </li>
         
         
-        <li class="pagination-number">page 1 of 1</li>
+            
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#" aria-label="Back to top">
+            
+                <i class="fa fa-list" aria-hidden="true"></i>
+            </a>
+        </li>
     </ul>
 </div>
 
-</section>
+
+        
+        
+            
+        
+    </div>
+</article>
 
 
 
@@ -358,6 +383,151 @@
 </footer>
 
             </div>
+            
+                <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+                    <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a
+                        class="post-action-btn btn btn--disabled"
+                        aria-hidden="true"
+                    >
+                        
+                        <i class="fa fa-angle-left" aria-hidden="true"></i>
+                        <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
+                    </a>
+            </li>
+            <li class="post-action">
+                
+                    
+                <a
+                    class="post-action-btn btn btn--default tooltip--top"
+                    href="/2022/05/15/hello-world/"
+                    data-tooltip="git 블로그 시작하기"
+                    aria-label="NEXT: git 블로그 시작하기"
+                >
+                    
+                        <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a
+                class="post-action-btn btn btn--default btn-open-shareoptions"
+                href="#btn-open-shareoptions"
+                aria-label="Share this post"
+            >
+                <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </a>
+        </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://mmj-developer.github.io/2022/06/04/post-name/"
+                    title="Share on Facebook"
+                    aria-label="Share on Facebook"
+                >
+                    <i class="fab fa-facebook" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://twitter.com/intent/tweet?text=https://mmj-developer.github.io/2022/06/04/post-name/"
+                    title="Share on Twitter"
+                    aria-label="Share on Twitter"
+                >
+                    <i class="fab fa-twitter" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://plus.google.com/share?url=https://mmj-developer.github.io/2022/06/04/post-name/"
+                    title="Share on Google+"
+                    aria-label="Share on Google+"
+                >
+                    <i class="fab fa-google-plus" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+        
+            
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#" aria-label="Back to top">
+            
+                <i class="fa fa-list" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+                </div>
+                
+    <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+        <i id="btn-close-shareoptions" class="fa fa-times"></i>
+        <ul class="share-options">
+            
+                
+                
+                <li class="share-option">
+                    <a
+                        class="share-option-btn"
+                        target="new"
+                        href="https://www.facebook.com/sharer/sharer.php?u=https://mmj-developer.github.io/2022/06/04/post-name/"
+                        aria-label="Share on Facebook"
+                    >
+                        <i class="fab fa-facebook" aria-hidden="true"></i><span>Share on Facebook</span>
+                    </a>
+                </li>
+            
+                
+                
+                <li class="share-option">
+                    <a
+                        class="share-option-btn"
+                        target="new"
+                        href="https://twitter.com/intent/tweet?text=https://mmj-developer.github.io/2022/06/04/post-name/"
+                        aria-label="Share on Twitter"
+                    >
+                        <i class="fab fa-twitter" aria-hidden="true"></i><span>Share on Twitter</span>
+                    </a>
+                </li>
+            
+                
+                
+                <li class="share-option">
+                    <a
+                        class="share-option-btn"
+                        target="new"
+                        href="https://plus.google.com/share?url=https://mmj-developer.github.io/2022/06/04/post-name/"
+                        aria-label="Share on Google+"
+                    >
+                        <i class="fab fa-google-plus" aria-hidden="true"></i><span>Share on Google+</span>
+                    </a>
+                </li>
+            
+        </ul>
+    </div>
+
+
             
         </div>
         
@@ -416,6 +586,8 @@
 
 <!--SCRIPTS END-->
 
+
+    
 
 
 
